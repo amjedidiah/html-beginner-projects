@@ -1,22 +1,67 @@
 <!DOCTYPE html>
-<html lang="en">
+<html class="no-js" lang="en">
   <head>
-    <!-- Page Title -->
-    <title>Steve Jobs</title>
-
-    <!-- Required meta tags -->
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- Favicon -->
-    <link
-      rel="icon"
-      type="image/png"
-      href="https://jorge-sanz.github.io/tribute-page/media/favicon.png"
+    <title>Steve Jobs</title>
+    <meta
+      name="description"
+      content="An improvement to Jorge Sanz tribute to Steve Jobs"
     />
+    <meta name="robots" content="index,follow" />
+    <meta property="fb:page_id" content="" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!--
+      Give name for pinning site to Taskbar on WIndows.
+    -->
+    <meta
+      name="application-name"
+      content="Steve Jobs Tribute | Jedidiah Amaraegbu"
+    />
+    <!--
+      Give site tooltip for pinning
+    -->
+    <meta
+      name="msapplication-tooltip"
+      content="Steve Jobs Tribute | Jedidiah Amaraegbu"
+    />
+    <meta name="msapplication-TileColor" content="#000000" />
+    <!-- Make it possible to pin app on mobile -->
+    <meta name="mobile-web-app-capable" content="yes" />
+    <!-- Get Site to look like app on iOS  -->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="#000000" />
+    <!--
+      Add Title for when site is pinned to iOS screen
+    -->
+    <meta
+      name="apple-mobile-web-app-title"
+      content="Steve Jobs Tribute | Jedidiah Amaraegbu"
+    />
+    <meta name="theme-color" content="#000000" />
 
-    <!-- Google Fonts -->
+    <!--
+      Add icon for when pinned to iOS & any other mobile
+     -->
+    <link rel="icon" sizes="192x192" href="media/logo192.png" />
+    <link rel="apple-touch-icon" href="media/logo512.png" />
+    <!--
+      Display certain image when site is loaded as app on iOS
+     -->
+    <link
+      rel="apple-touch-startup-image"
+      media="(max-width: 480px) and (-webkit-min-device-pixel-ratio: 2)"
+      href="media/logo512.png"
+    />
+    <link rel="manifest" href="site.webmanifest" />
+
+    <!--
+      DNS Prefetching: prefetches the site that is included in the href
+    -->
+    <link rel="dns-prefetch" href="//ka-f.fontawesome.com" />
+    <link rel="dns-prefetch" href="//fonts.googleapis.com" />
+    <link rel="dns-prefetch" href="//fonts.gstatic.com" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -25,9 +70,9 @@
     />
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="css/style.min.css" />
   </head>
-  <body>
+  <body style="background: #ffffff">
     <main>
       <section id="section-one">
         <video playsinline loop poster="./media/steve-jobs-1.jpg" id="vid">
@@ -94,19 +139,28 @@
 
           <hr />
           <p class="author-text">
-            Cloned from <a href="http://jorgesanz.xyz/">Jorge Sanz</a>
+            Cloned from <a href="https://jorge-sanz.github.io/tribute-page/">Jorge Sanz</a>
           </p>
         </article>
       </section>
     </main>
 
     <!-- FontAwesome -->
-    <script
-      src="https://kit.fontawesome.com/a2ea8d437a.js"
-      crossorigin="anonymous"
-    ></script>
+    <script src="js/fontawesome.min.js" crossorigin="anonymous" defer></script>
 
     <!-- Custom JS -->
-    <script src="script.js"></script>
+    <script src="js/script.min.js" defer></script>
+
+    <!--
+      !Service Worker
+     -->
+    <script>
+      // ServiceWorker is a progressive technology. Ignore unsupported browsers
+      if ("serviceWorker" in navigator) {
+        window.addEventListener("load", () =>
+          navigator.serviceWorker.register("sw.js")
+        );
+      }
+    </script>
   </body>
 </html>
