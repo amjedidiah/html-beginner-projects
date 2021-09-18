@@ -79,6 +79,10 @@ video {
   left: 0;
 }
 
+video.paused {
+  opacity: 0;
+}
+
 .align-items-center {
   align-items: center;
 }
@@ -122,12 +126,20 @@ video {
   position: absolute;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+#section-one.paused {
+  background: url(./media/steve-jobs-1.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
 img.play-button {
-  margin-top: 10vh;
   width: 50px;
+  margin: 10vh 15px 0;
 }
 
 #section-two,

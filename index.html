@@ -30,39 +30,31 @@
   <body>
     <main>
       <section id="section-one">
-        <video playsinline autoplay muted loop id="vid">
+        <video playsinline loop poster="./media/steve-jobs-1.jpg" id="vid">
           <source src="./media/steve-jobs-design.mp4" type="video/mp4" />
-          <track
-            label="English"
-            kind="captions"
-            srclang="en"
-            src="resources/myvideo-en.vtt"
-            default
-          />
-          <track
-            label="Deutsch"
-            kind="captions"
-            srclang="de"
-            src="resources/myvideo-de.vtt"
-          />
-          <track
-            label="Español"
-            kind="captions"
-            srclang="es"
-            src="resources/myvideo-es.vtt"
-          />
         </video>
         <article class="d-flex align-items-center justify-content-center">
           <div class="container">
             <h1>Steve Jobs</h1>
             <h3>1955 -2011</h3>
 
-            <a href="https://www.youtube.com/watch?v=Ddjy_hTO7Tc">
+            <a href="javascript:void(0)">
               <span class="d-none">Play button</span>
               <img
-                src="./media/CircularPlayButton.png"
+                onclick="togglePlay()"
+                src="./media/play.png"
                 alt="play-button"
                 class="play-button"
+                width="80"
+              />
+            </a>
+            <a href="javascript:void(0)">
+              <span class="d-none">Play button</span>
+              <img
+                onclick="toggleSound()"
+                src="./media/unmuted.png"
+                alt="sound-button"
+                class="sound-button"
                 width="80"
               />
             </a>
@@ -113,5 +105,8 @@
       src="https://kit.fontawesome.com/a2ea8d437a.js"
       crossorigin="anonymous"
     ></script>
+
+    <!-- Custom JS -->
+    <script src="script.js"></script>
   </body>
 </html>
