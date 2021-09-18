@@ -13,7 +13,15 @@
     <link
       rel="icon"
       type="image/png"
-      href="https://jorge-sanz.github.io/tribute-page/images/favicon.png"
+      href="https://jorge-sanz.github.io/tribute-page/media/favicon.png"
+    />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;1,400;1,500&family=Roboto:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap"
+      rel="stylesheet"
     />
 
     <!-- Custom CSS -->
@@ -21,29 +29,64 @@
   </head>
   <body>
     <main>
-      <section>
-        <article>
-          <h1>Steve Jobs</h1>
-          <h3>1955 -2011</h3>
+      <section id="section-one">
+        <video playsinline autoplay muted loop id="vid">
+          <source src="./media/steve-jobs-design.mp4" type="video/mp4" />
+          <track
+            label="English"
+            kind="captions"
+            srclang="en"
+            src="resources/myvideo-en.vtt"
+            default
+          />
+          <track
+            label="Deutsch"
+            kind="captions"
+            srclang="de"
+            src="resources/myvideo-de.vtt"
+          />
+          <track
+            label="Español"
+            kind="captions"
+            srclang="es"
+            src="resources/myvideo-es.vtt"
+          />
+        </video>
+        <article class="d-flex align-items-center justify-content-center">
+          <div class="container">
+            <h1>Steve Jobs</h1>
+            <h3>1955 -2011</h3>
 
-          <a href="https://www.youtube.com/watch?v=8rwsuXHA7RA">
-            <img src="./images/CircularPlayButton.png" alt="play-button" />
-          </a>
+            <a href="https://www.youtube.com/watch?v=Ddjy_hTO7Tc">
+              <span class="d-none">Play button</span>
+              <img
+                src="./media/CircularPlayButton.png"
+                alt="play-button"
+                class="play-button"
+                width="80"
+              />
+            </a>
+          </div>
         </article>
       </section>
 
-      <section>
-        <article>
-          <p>
-            Design is not just what it looks like and feels like. Design is how
-            it works.
-          </p>
-          <img alt="steve-jobs" src="./images/steve-jobs.png" />
+      <section id="section-two">
+        <article class="d-flex justify-content-end">
+          <div>
+            <blockquote cite="https://jorge-sanz.github.io/tribute-page/">
+              Design is not just what it looks like and feels like. Design is
+              how it works.
+            </blockquote>
+          </div>
+          <div class="img-holder">
+            <img alt="steve-jobs" src="./media/steve-jobs.png" />
+          </div>
         </article>
       </section>
 
-      <section>
-        <article>
+      <section id="section-three">
+        <br />
+        <article class="container">
           <h1>Biography</h1>
           <h5>
             Steven Paul “Steve” Jobs was an American information technology
@@ -56,20 +99,19 @@
             revolutionized six industries: personal computers, animated movies,
             music, phones, tablet computing, and digital publishing.
           </h5>
+
           <hr />
+          <p class="author-text">
+            Cloned from <a href="http://jorgesanz.xyz/">Jorge Sanz</a>
+          </p>
         </article>
       </section>
     </main>
 
-    <!-- Document Footer -->
-    <footer>
-      <p>
-        Made with <i class="fa fa-apple"></i> by
-        <a href="http://jorgesanz.xyz/">Jorge Sanz</a>
-      </p>
-    </footer>
-
     <!-- FontAwesome -->
-    <script src="https://kit.fontawesome.com/a2ea8d437a.js" crossorigin="anonymous"></script>
+    <script
+      src="https://kit.fontawesome.com/a2ea8d437a.js"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>
